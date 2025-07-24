@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="content-type" content="text/html" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TAXO</title>
+  <!-- style -->
+  <link rel="stylesheet" href="sys/style/base/base.css" />
+  <link rel="stylesheet" href="sys/style/icon/svg/icon.svg.css" />
+  <link rel="stylesheet" href="sys/style/plugin/section/margin/section.margin.css" />
+  <link rel="stylesheet" href="sys/style/plugin/ul/colorize/ul.colorize.css" />
+  <link rel="stylesheet" href="sys/style/plugin/ol/colorize/ol.colorize.css" />
+  <link rel="stylesheet" href="sys/style/plugin/table/autosort/table.autosort.css" />
+  <link rel="stylesheet" href="sys/style/plugin/summary/marker/summary.marker.css" />
+  <link rel="stylesheet" href="sys/style/widget/list/list.css" />
+  <link rel="stylesheet" href="sys/style/widget/button/material/button.material.css" />
+  <link rel="stylesheet" href="sys/style/widget/menu/context/menu.context.css" />
+  <link rel="stylesheet" href="sys/style/widget/checkbox/checkbox.css" />
+  <link rel="stylesheet" href="sys/style/widget/radio/radio.css" />
+  <link rel="stylesheet" href="sys/style/widget/breadcrumb/breadcrumb.css" />
+  <link rel="stylesheet" href="sys/style/widget/breadcrumb/breadcrumb.36px.css" />
+  <link rel="stylesheet" href="sys/style/widget/label/label.css" />
+  <link rel="stylesheet" href="sys/style/widget/tab/tab.css" />
+  <link rel="stylesheet" href="sys/style/widget/accordion/accordion.css" />
+  <link rel="stylesheet" href="sys/style/widget/dialog/dialog.css" />
+  <link rel="stylesheet" href="sys/style/widget/steps/steps.css" />
+  <link rel="stylesheet" href="sys/style/widget/tree/tree.css" />
+  <link rel="stylesheet" href="sys/style/widget/hint/hint.min.css" />
+  <link rel="stylesheet" href="sys/style/utility/scrollable/scrollable.css" />
+  <link rel="stylesheet" href="sys/style/utility/display/display.css" />
+  <link rel="stylesheet" href="sys/style/utility/output/output.css" />
+  <link rel="stylesheet" href="sys/tool/prism/themes/prism.min.css" />
+  <link rel="stylesheet" href="sys/tool/prism/editor/editor.css" />
+  <link rel="stylesheet" href="sys/style/layout/grid/grid.css" />
+  <link rel="stylesheet" href="sys/style/layout/grid/grid.responsive.css" />
+  <link rel="stylesheet" href="sys/style/layout/app/app.css" />
+  <link rel="stylesheet" href="sys/style/config/initial.css" />
+  <link rel="stylesheet" href="sys/style/config/special.css" />
+  <link rel="stylesheet" href="sys/style/config/theme.css" />
+  <!-- script/tool -->
+  <script src="sys/tool/cssclass.min.js"></script>
+  <script src="sys/tool/navigo.min.js"></script>
+  <script src="sys/tool/load.min.js"></script>
+  <script src="sys/tool/list.min.js"></script>
+  <script src="sys/tool/string.js"></script>
+  <script src="sys/tool/string_multi_line.min.js"></script>
+  <script src="sys/tool/insert_tag.min.js"></script>
+  <script src="sys/tool/platform.min.js"></script>
+  <script src="sys/tool/tablesort.min.js"></script>
+  <script src="sys/tool/preview.min.js"></script>
+  <script src="sys/tool/copyToClipboard.min.js"></script>
+  <script src="sys/tool/eol.min.js"></script>
+  <script src="sys/tool/lorem.min.js"></script>
+  <script src="sys/tool/TPL.min.js"></script>
+  <script src="sys/tool/javascript-stringify.min.js"></script>
+  <script src="sys/tool/filesaver.min.js"></script>
+  <!-- script/data -->
+  <script src="data/config.js"></script>
+  <script src="data/meta.js"></script>
+  <script src="data/template.js"></script>
+  <!-- script/operation -->
+  <script src="sys/view/dialog/dialog.js"></script>
+  <script src="sys/view/dialog/dialog_info.js"></script>
+  <script src="sys/view/section/section.js"></script>
+  <script src="sys/view/section/section_main.js"></script>
+  <script src="sys/view/section/section_list.index.js"></script>
+  <script src="sys/view/section/section_list.recent.js"></script>
+  <script src="sys/view/section/section_list.meta.index.js"></script>
+  <script src="sys/view/section/section_list.meta.of.js"></script>
+  <script src="sys/view/section/section_list.meta.line.js"></script>
+  <script src="sys/view/page/page.js"></script>
+  <script src="sys/view/page/page_index.js"></script>
+  <script src="sys/view/page/page_collection.js"></script>
+  <script src="sys/view/page/page_detail.js"></script>
+  <script src="sys/view/page/page_tool.js"></script>
+  <script src="sys/view/page/page_edit.js"></script>
+</head>
+<body class="hide">
+	<div class="app">
+    <div class="app-bar">
+      <div class="app-bar__menu">
+        <i class="icon_svg">menu</i>
+      </div>
+      <div class="app-bar__title">
+        <h1 id="title_bar">TITLE</h1>
+      </div>
+      <div class="app-bar__search">
+      	<div class="app-bar__search-icon--magnify">
+      		<i class="icon_svg">magnify</i>
+      	</div>
+        <div class="app-bar__search-input">
+        	<input type="text" placeholder="search ..." />
+        </div>
+        <div class="app-bar__search-icon--close">
+        	<i class="icon_svg">close</i>
+        </div>
+      </div>
+      <div class="app-bar__sort">
+      	<i class="icon_svg">sort-descending</i>
+      </div>
+      <div class="app-bar__context"  id="the_context">
+        <i class="icon_svg">dots-vertical</i>
+      </div>
+      <div class="app-bar__context_area hide menu_context_parent">
+      	<div class="menu_context">
+    			<div class="menu_context_layer"></div>
+    			<div class="menu_context_content">
+    				<ul id="menu_context_list" class="list menu_context_list">
+    					<li class="list_item">
+    						<span class="list_content">
+    							<span class="list_text">MENU_ITEM</span>
+    						</span>
+    					</li>
+              <li class="list_item">
+                <span class="list_content">
+                  <span class="list_text" onclick="location.href='#/edit'">EDIT</span>
+                </span>
+              </li>
+              <li class="list_item">
+                <span class="list_content">
+                  <span class="list_text" onclick="app_bar__context__area.addClass( 'hide' )">TODO</span>
+                </span>
+              </li>
+    				</ul>
+    			</div>
+    		</div>
+      </div>
+    </div>
+    <div class="app-drawer">
+    	<div class="app-drawer__header">
+        <h3 id="title_drawer">TITLE</h3>
+      </div>
+      <div class="app-drawer__content list">
+      	<a class="list_item" href="#/">
+      		<div class="list_content">
+      			<i class="list_icon__before icon_svg">home</i>
+      			<span class="list_text">Home</span>
+      		</div>
+      	</a>
+        <a class="list_item" href="#/collection">
+          <div class="list_content">
+            <i class="list_icon__before icon_svg">tag-multiple</i>
+            <span class="list_text">Collection</span>
+          </div>
+        </a>
+        <a class="list_item" href="#/tool" id="admin_tool">
+          <div class="list_content">
+            <i class="list_icon__before icon_svg">treasure-chest</i>
+            <span class="list_text">Tools</span>
+          </div>
+        </a>
+        <span class="list_item" id="app_info">
+          <div class="list_content">
+            <i class="list_icon__before icon_svg">help-circle-outline</i>
+            <span class="list_text">Info</span>
+          </div>
+        </span>
+    	</div>
+    </div>
+    <div class="app-drawer__layer"></div>
+    <div class="app-main" id="app_main"></div>
+    <div class="dialog" id="app_dialog"></div>
+  </div>
+  <!-- events -->
+  <script src="sys/style/icon/svg/icon.svg.js"></script>
+  <script src="sys/style/plugin/textarea/prepared/textarea.prepared.js"></script>
+  <script src="sys/style/plugin/table/autosort/table.autosort.js"></script>
+  <script src="sys/style/plugin/pre/prepared/pre.prepared.js"></script>
+  <script src="sys/style/widget/list/list.dropdown.js"></script>
+  <script src="sys/style/widget/menu/context/menu.context.js"></script>
+  <script src="sys/style/widget/tab/tab.js"></script>
+  <script src="sys/style/widget/accordion/accordion.js"></script>
+  <script src="sys/style/widget/dialog/dialog.js"></script>
+  <script src="sys/tool/prism/prism.build.js"></script>
+  <script src="sys/tool/prism/lang/prism-bash.min.js"></script>
+  <script src="sys/tool/prism/lang/prism-git.min.js"></script>
+  <script src="sys/tool/prism/lang/prism-java.min.js"></script>
+  <script src="sys/tool/prism/editor/editor.min.js"></script>
+  <script src="sys/style/layout/app/app_bar__menu.js"></script>
+  <script src="sys/style/layout/app/app_bar__search.js"></script>
+  <script src="sys/style/layout/app/app_bar__sort.js"></script>
+  <script src="sys/style/layout/app/app_bar__context.js"></script>
+  <script src="sys/view/event/event_app_bar__search.js"></script>
+  <script src="sys/view/event/event_app_bar__sort.js"></script>
+  <script src="sys/view/event/event_main_bar_button.js"></script>
+  <script src="sys/view/event/event_drawer_hide.js"></script>
+  <script src="sys/view/event/event_app_info.js"></script>
+  <script src="sys/view/event/event_widget.js"></script>
+  <script src="sys/mv/txdb.js"></script>
+  <script src="sys/mv/converter.js"></script>
+  <script src="sys/mv/ecrd.js"></script>
+  <script src="sys/boot.js"></script>  
+</body>
+</html>

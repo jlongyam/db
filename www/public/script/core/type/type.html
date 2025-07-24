@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="content-type" content="text/html" />
+  <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <title>type</title>
+  <script src="../type.js"></script>
+  <script src="../createElement.js"></script>
+  <script src="../createFragment.js"></script>
+  <script src="../log.js"></script>
+</head>
+<body>
+  <h2>type( OBJ, FULLCLASS )</h2>
+  <script>
+    logBox([ 'type(1)', type(1) ])
+    logBox([ 'type(/\\./d)', type(/\\./d) ])
+    logBox([ 'type({})', type({}) ])
+    logBox([ 'type({}, true )', type({}, true ) ])
+    logBox([ 'type([])', type([]) ])
+    logBox([ 'type([], true )', type([], true ) ])
+    logBox([ 'type( window )', type( window ) ])
+    logBox([ 'type( window, true )', type( window, true ) ])
+    logBox([ 'type( null )', type( null ) ])
+    logBox([ 'type( null, true )', type( null, true ) ])
+    logBox([ 'type( undefined )', type( undefined ) ])
+    logBox([ 'type( undefined, true )', type( undefined, true ) ])
+    logBox([ 'type( Promise.resolve() )', type( Promise.resolve() ) ])
+    logBox([ 'type( Promise.resolve(), true )', type( Promise.resolve(), true ) ])
+  </script>
+</body>
+</html>

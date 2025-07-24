@@ -1,0 +1,18 @@
+:root {
+	--plugin__summary_icon-close: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24"><path d="M10,17L15,12L10,7V17Z" /></svg>');
+	--plugin__summary_icon-open: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24"><path d="M7,10L12,15L17,10H7Z" /></svg>');
+	}
+summary {
+	position: relative;
+	padding-left: 1rem;
+	}
+	summary:before {
+		position: absolute;
+		color: red;
+		content: var( --plugin__summary_icon-close );
+		left: -7px;
+		top: -2px;
+		}
+	details[open] > summary:before {
+		content: var( --plugin__summary_icon-open );
+		}

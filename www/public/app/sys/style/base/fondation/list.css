@@ -1,0 +1,36 @@
+dl,
+ol,
+ul,
+menu {
+  margin-bottom: var( --base__margin-bottom );
+  }
+dd,
+ol ol,
+ul ul,
+menu menu,
+ol ul,
+ul ol,
+menu ol,
+menu ul {
+  margin-bottom: 0;
+  }
+dt {
+  font-weight: bold;
+  }
+dd {
+  margin-left: var( --base__margin-left );
+  }
+menu { list-style: none; }
+menu menu {
+  padding-left: .75rem;
+  border-left: 2px solid var( --base__color--block );
+  }
+ol,
+ul {
+	padding-left: 1.25rem;
+  }
+li {
+  list-style: inherit;
+  }
+
+

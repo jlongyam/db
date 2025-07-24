@@ -1,0 +1,47 @@
+:root {
+  --base__font-family--content: var( --font-family_sans-serif );
+  --base__font-family--heading: var( --font-family_serif );
+  --base__font-family--mono: var( --font-family_monospace );
+  --base__font-size: 1rem;
+  --base__line-height: 1.25;
+  --base__tab-size: 4;
+  --base__box-shadow: 0 1px 2px var( --color_black );
+  --base__color--window: var( --color_silver );
+  --base__color--document: var( --color_white );
+  --base__color--font: var( --color_black );
+  --base__color--selection: var( --color_aqua );
+  --base__color--block: var( --color_gray );
+  --base__color--a_link: var( --color_blue );
+  --base__color--a_active: var( --color_red );
+  --base__color--a_visited: var( --color_navy );
+  --base__color--mark: var( --color_yellow );
+  --base__color--var: var( --color_green );
+  --base__color--dfn: var( --color_orange );
+  --base__color--strong: var( --color_red );
+  --base__margin-bottom: 1rem;
+  --base__margin-left: 1rem;
+  --base__padding: 1rem;
+  }
+::selection{
+  }
+  ::selection {
+    background-color: var( --base__color--selection );
+    color: #000;
+    text-shadow: none;
+    }
+html {
+  font-family: var( --base__font-family--content );
+  font-size: var( --base__font-size );
+  line-height: var( --base__line-height );
+  background-color: var( --base__color--window );
+  color: var( --base__color--font );
+  -moz-tab-size: var( --base__tab-size );
+  tab-size: var( --base__tab-size );
+  cursor: default;
+}
+body {
+  margin: 1.5%;
+  padding: 2.5%;
+  background-color: var( --base__color--document );
+  box-shadow: var( --base__box-shadow );
+}

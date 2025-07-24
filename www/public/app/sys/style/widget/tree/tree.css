@@ -1,0 +1,61 @@
+:root {
+  --widget__tree_color: var( --base__color--block );
+  }
+
+/** tree
+  *
+  */
+  ul.tree {
+    margin: .5rem 0;
+    padding: 0 0 0 1rem;
+    position: relative;
+    }
+  ul.tree li {
+    list-style: none;
+    }
+  ul.tree ul {
+    margin: .25rem 0;
+    padding: 0 0 0 1rem;
+    }
+  ul.tree > li,
+  ul.tree ul > li {
+    display: block;
+    position: relative;
+    padding-left: 0;
+    }
+  /** line,
+      phone bug !
+      use 'px' instead of 'rem',
+      line 2px instead 1px.
+      */
+  ul.tree:before,
+  ul.tree ul:before {
+    position: absolute;
+    content: '';
+    border-left: 2px solid var( --widget__tree_color );
+    top: 5px;
+    left: 2px;
+    bottom: 10px;/*A1*/
+    }
+  ul.tree ul:before {
+    top: 1.5rem;
+    }
+  ul.tree > li:before,
+  ul.tree ul > li:before {
+    position: absolute;
+    content: '';
+    border-top: 2px solid var( --widget__tree_color );
+    top: 10px;
+    left: -14px;
+    width: 12px;
+    height: 0;/* normalize ul.colorize */
+    }
+  /** opaque fix ! */
+  ul.tree li:last-child > ul:after {
+    position: absolute ;
+    content: "" ;
+    border-left: 4px solid var( --base__color--document );
+    top: 12px ;
+    left: -15px;
+    bottom: 10px;/*see A1*/
+    }

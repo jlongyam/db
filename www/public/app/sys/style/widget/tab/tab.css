@@ -1,0 +1,69 @@
+:root {
+  --widget__tab_border: 2px solid var( --base__color--block );
+  --widget__tab_color: #000;
+  --widget__tab_color__active: #000;
+  --widget__tab_hover-color: #bdbdbd;
+  --widget__tab_head-padding: .5rem .75rem;
+}
+
+.tab {
+	height: 100%;
+	position: relative;
+	}
+.tab-head {
+	overflow-x: auto;
+	white-space: nowrap;
+	border-bottom: var( --widget__tab_border );
+	}
+	.tab-head::-webkit-scrollbar {
+		display: none;
+		}
+.tab-body-item-switch {
+	display: none;
+	}
+.tab-head-item {
+	border: 2px solid orange;
+	border: var( --widget__tab_border );
+	border-bottom: 0;
+	border-left: 0;
+	display: inline-block;
+	position: relative;
+	margin-left: -5px;
+	padding: var( --widget__tab_head-padding );
+	color: var( --widget__tab_color );
+	}
+	.tab-head-item.active {
+		background-color: var( --base__color--block );
+		color: var( --widget__tab_color__active );
+		}
+	.tab-head-item:first-child {
+		margin-left: 0;
+		border-left: 2px solid orange;
+		border-left: var( --widget__tab_border );
+		}
+	.tab-head-item > label {
+		padding: var( --widget__tab_head-padding );
+		margin: 0 -.5rem;
+		cursor: pointer;
+		}
+	.tab-head-item:hover {
+		background-color: orange;
+		background-color: var( --widget__tab_hover-color );
+		color: var( --widget__tab_color__active );
+		}
+.tab-body {
+	height : 100%;
+	padding: 1rem;
+	border: 2px solid orange;
+	border: var( --widget__tab_border );
+	border-top: 0;
+	background-color: #fff;
+	}
+.tab-body-item {
+	display: none
+	}
+	.tab-body-item-switch:checked + .tab-body-item {
+		display: block;
+		}
+				
+					

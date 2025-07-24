@@ -1,0 +1,165 @@
+/** minimal-structure
+  *
+  <!-- optional --><div class="ta-edit__bar">ta-edit bar</div>
+  <div class="ta-edit">
+    <div class="ta-box">
+      <textarea class="ta-box__area">var out = 'TODO';</textarea>
+    </div>
+  </div>
+  *
+  */
+/** normalize prism.css
+  *
+  */
+  :not(pre)>code[class*=language-],
+  pre[class*=language-] {
+    background: inherit;
+    }
+  pre[class*=language-] {
+    margin: 0;
+    padding: 1rem;
+    }
+  code[class*=language-], pre[class*=language-] {
+    line-height: inherit;
+    tab-size: var( --base__tab-size );
+    }
+  code[class*=language-] mark,
+  pre[class*=language-] mark {
+    text-shadow: none;
+    }
+/** editor
+  *
+  */
+  :root {
+    --ta-edit__lineheight: 1.25em;
+    --ta-edit__width: 100%;
+    --ta-edit__height: 100%;
+    --ta-edit__background-color: white;
+    --ta-edit__color: black;
+    --ta-edit__font-familiy: Consolas, monospace;
+    --ta-edit__tab-size: 2;
+    --ta-edit__caret-color: red;
+    --ta-edit__padding: 1em;
+    --ta-edit__selection-color: #ff572247;
+    --ta-edit__border: 2px solid #3f51b5;
+    --ta-edit__bar: #3f51b5 ;
+    }
+  .ta-edit {
+    position: relative;
+    user-select: none;
+    width: 100%;
+    width: var( --ta-edit__width );
+    height: 100%;
+    height: var( --ta-edit__height );
+    border: var( --ta-edit__border );
+    background-color: var( --ta-edit__background-color );
+    color: var( --ta-edit__color );
+    min-height: 100px;
+    margin-bottom: 1rem;
+    }
+  .ta-box {
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    font-size: 100%;
+    overflow: hidden;
+    line-height: 1.25em;
+    line-height: var( --ta-edit__lineheight );
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Consolas, monospace;
+    font-family: var( --ta-edit__font-familiy );
+    -moz-tab-size: 2;
+    tab-size: 2;
+    -moz-tab-size: var( --ta-edit__tab-size );
+    tab-size: var( --ta-edit__tab-size );
+    background-color: orange;
+    background-color: var( --ta-edit__background-color );
+    color: black;
+    color: var( --ta-edit__color );
+    }
+  .ta-box__pre,
+  .ta-box__area {
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    font-family: inherit ;
+    line-height: inherit ;
+    padding: var( --ta-edit__padding );
+    tab-size: 2;
+    tab-size: var( --base__tab-size );
+    }
+  .ta-box__pre {
+    background-color: inherit;
+    color: inherit;
+    }
+    .ta-box__pre::-webkit-scrollbar {
+      display: none;
+      height: 0;
+      visibility: hidden;
+      }
+  .ta-box__area {
+    resize: none ;
+    border: 0;
+    background-color: transparent;
+    text-shadow: 0 0 0 rgba( 0, 0, 0, 0);
+    text-shadow: none;
+    -webkit-text-fill-color: transparent ;
+    color: red;
+    color: var( --ta-edit__caret-color );
+    }
+    .ta-box__area:focus {
+      outline: 0;
+      }
+    .ta-box__area::selection {
+      background-color: #ff572247;
+      background-color: var( --ta-edit__selection-color );
+      color: #000;
+      text-shadow: none;
+      }
+  .ta-box__code {
+    font-family: inherit ;
+    font-size: inherit;
+    line-height: inherit;
+    }
+  .ta-edit__bar {
+    background-color: #3f51b5;
+    background-color: var( --ta-edit__bar );
+    padding: 0.5em;
+    padding-left: 1rem;
+    color: white;
+    }
+/** prism-theme
+  *
+  */
+  .token.property,
+  .token.tag,
+  .token.boolean,
+  .token.number,
+  .token.constant,
+  .token.symbol,
+  .token.deleted {
+    color: #673AB7;
+    }
+  .token.selector,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin,
+  .token.inserted {
+    color: #FF5722;
+    }
+  .token.atrule,
+  .token.attr-value,
+  .token.keyword {
+    color: #009688;
+    }

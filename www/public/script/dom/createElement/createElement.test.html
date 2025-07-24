@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="content-type" content="text/html" />
+  <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <title>createElement</title>
+  <script src="../../prototype/String.min.js"></script>
+  <script src="../createElement.js"></script>
+  <script src="../type.js"></script>
+  <script src="../selector.js"></script>
+</head>
+<body>
+  <h2><code>createElement( TAGNAME, PROPERTIES )</code></h2>
+  <script>
+    const pre = createElement( 'pre', { className: 'pre', textContent: 'RESULT' } )
+    document.body.appendChild( pre )
+    const script = document.currentScript
+    document.body.insertBefore( pre, script )
+    pre.textContent = pre.outerHTML
+    const style = createElement( 'style', { textContent: 'pre { color: red }' } )
+    document.head.appendChild( style )
+    style.textContent += `
+      body > script {
+        display: block;
+        white-space: pre;
+        font-family: monospace;
+        font-size: 1em;
+        padding: 5px;
+        border: 2px solid silver;
+        overflow: auto;
+        color: gray;
+      }
+    `
+    script.textContent = script.innerHTML.stripInitialWhitespace().trim()
+  </script>
+</body>
+</html>

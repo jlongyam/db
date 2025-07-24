@@ -1,0 +1,112 @@
+:root {
+	--list__color_border: transparent;
+	--list__color_icon: #9e9e9e;
+	--list__color_hover: #eeeeee;
+	--list__color_active: #bdbdbd;
+	--list__color_text__foot: #9e9e9e;
+}
+
+.list {
+	list-style: none;
+	padding-left: 0;
+	display: block;
+	box-sizing: inherit;
+	width: 100%;
+	}
+	.list_item .list {
+		padding: 0 1rem;
+		margin: .5rem 0;
+		}
+.list_item {
+	display: block;
+	border: 1px solid var( --list__color_border );
+	}
+.list_content {
+	display: table;
+	min-height: 48px;
+	width: 100%;
+	user-select: none;
+	}
+	.list_content:hover {
+		background-color: var( --list__color_hover );
+		}
+	.list_content:active {
+		background-color: var( --list__color_active );
+		}
+.list_text,
+.list_icon__before,
+.list_icon__after {
+	display: table-cell;
+	vertical-align: middle;
+	}
+.list_icon__before,
+.list_icon__after {
+	width: 48px;
+	text-align: center;
+	}
+	.list_icon__before.icon-svg,
+	.list_icon__after.icon-svg,
+	.list_icon__before.icon_svg,
+	.list_icon__after.icon_svg {
+		padding-left: 0;
+		fill: var( --list__color_icon );
+		}
+	.list_icon__before > .icon_svg {
+		height: auto;
+		}
+.list_text {
+	padding-left: 1rem;
+	/*normalize <i>*/font-style: normal;
+	/*fix: firefox*/height: 48px;
+	}
+	.list_text > :first-child {
+		margin-top: .5rem;
+		}
+	.list_text > :last-child {
+		margin-bottom: .5rem;
+		}
+	.list_icon__before + .list_text {
+		padding-left: 0;
+		}
+.list_text__head,
+.list_text__body,
+.list_text__foot {
+	display: block;
+}
+.list_text__head {
+	font-weight: 700;
+	font-size: 1.25rem;
+	}
+.list_text__body {
+
+	}
+.list_text__foot {
+	font-size: 90%;
+	font-style: italic;
+	color: var( --list__color_text__foot );
+	margin-bottom: .5rem;
+	}
+/* normalize link */
+a.list_item:link,
+a.list_item:visited,
+a.list_item:active,
+a.list_item:visited:active {
+	color: currentColor;
+	}
+a.list_item:active:hover,
+a.list_item:link:hover {
+	border-bottom-color: transparent; 
+	}
+/* ul.colorize */
+
+.list li {
+	padding-left: 0;
+	} 
+.list li:before {
+	content: none;
+	}
+
+/* dropdown */
+.list.hide {
+	display: none;
+	}

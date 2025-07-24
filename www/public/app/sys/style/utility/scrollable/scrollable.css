@@ -1,0 +1,7 @@
+.scrollable {
+	overflow-x: auto;
+	white-space: nowrap;
+	}
+	.scrollable::-webkit-scrollbar {
+		display: none;
+		}

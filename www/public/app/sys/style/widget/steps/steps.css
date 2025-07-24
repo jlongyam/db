@@ -1,0 +1,34 @@
+
+:root {
+  --widget__steps_color: var( --base__color--block );
+}
+/** normalize
+  *
+  */
+  ol li {
+    list-style: none;
+    }
+/** steps
+  *
+  */
+  ol.steps {
+    list-style-type: none;
+    counter-reset: step-counter;
+    padding-left: 3.75rem;
+    margin: 2rem 0 2rem 0;
+    }
+  ol.steps > li {
+    position: relative;
+    margin: 0 0 2rem 0;
+    }
+  ol.steps > li:before {
+    content: counter( step-counter );
+    counter-increment: step-counter;
+    position: absolute;
+    left: -3.75rem;
+    font-size: inherit;
+    border: solid 2px var( --widget__steps_color );
+    border-radius: 50%;
+    padding: 10px 15px;
+    top: -12px;
+    }

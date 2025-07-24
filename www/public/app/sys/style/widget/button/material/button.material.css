@@ -1,0 +1,88 @@
+:root {
+	--button_color: #000;
+	--button_color__dark: #fff;
+	--button_color_background: #fff;
+	--button_color_background__hover: #eeeeee;
+	--button_color_background__active: #bdbdbd;
+	--button_color_background__dark: #212121;
+	--button_color_background__light-dark: #616161;
+}
+.button {
+  -webkit-appearance: none;
+	display: inline-flex;
+	padding: 0 8px;
+	outline: 0;
+	border: 0;
+	border-radius: 2px;
+	vertical-align: middle;
+	height: 36px;
+	align-items: center;
+	justify-content: center;
+	background-color: var( --button_color_background );
+	color: var( --button_color );
+	-webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  min-width: 64px;
+	}
+	.button:hover {
+		cursor: pointer;
+		background-color: var( --button_color_background__hover );
+		}
+	.button:active {
+		background-color: var( --button_color_background__active );
+		}
+	.button:link {
+		color: currentColor;
+		}
+	.button:link:hover {
+		border: 0;
+		}
+	.button:disabled {
+		background-color: var( --button_color_background__hover );
+    cursor: default;
+    color: var( --button_color_background__light-dark );
+		}
+	.button._raised {
+		box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+  	transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  	background-color: var( --button_color_background__dark );
+  	color: var( --button_color__dark );
+		}
+		.button._raised:hover {
+			opacity: .9;
+			}
+		.button._raised:active {
+			box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+			opacity: .7;
+			}
+		.button._raised:disabled {
+			box-shadow: none;
+			cursor: default;
+			color: var( --button_color_background__active );
+			}
+			.button._raised:disabled:hover {
+				opacity: 1;
+				}
+	.button._outline {
+		border: 2px solid var( --button_color_background__dark );
+		}
+		.button._outline:hover {
+			background-color: var( --button_color_background );
+			border-color: var( --button_color_background__light-dark );
+			}
+		.button._outline:active {
+			background-color: var( --button_color_background );
+			opacity: .7;
+			}
+		.button._outline:disabled {
+			background-color: var( --button_color_background );
+			border-color: var( --button_color_background__light-dark );
+			color: var( --button_color_background__light-dark );
+			opacity: 1;
+      }
+     

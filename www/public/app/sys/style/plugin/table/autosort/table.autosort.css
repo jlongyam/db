@@ -1,0 +1,9 @@
+th:hover {
+  background-color: var( --base__color--block );
+  color: #fff;
+  cursor: pointer;
+  }
+ 	tfoot th:hover {
+    background-color: inherit;
+    color: inherit;
+    }

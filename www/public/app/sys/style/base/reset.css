@@ -1,0 +1,66 @@
+/* fondation for fondation.css */
+body,
+dl,dd,
+ul,ol,menu,
+hr,
+h1,h2,h3,h4,h5,h6,
+pre,
+blockquote,
+figure,
+p,
+fieldset,
+input {
+  margin: 0;
+  }
+ul,ol,menu,
+fieldset, legend,
+button, input,
+dialog {
+  padding: 0;
+  }
+fieldset, iframe, img,
+dialog {
+  border: 0;
+}
+li {
+  list-style: none;
+  }
+hr {
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #e2e2e2;
+  }
+abbr[title],
+a {
+  text-decoration: none;
+  color: inherit;
+  }
+h1,h2,h3,h4,h5,h6 {
+  font-size: 1rem;
+}
+table{
+  border-collapse: collapse;
+}
+caption,
+th {
+  text-align: left;
+}
+input:focus,
+textarea:focus,
+select:focus,
+summary:focus {
+  outline: 0;
+}
+/* chrome */
+summary::-webkit-details-marker {
+  display: none;
+  }
+/* firefox */
+summary::-moz-list-bullet {
+  list-style-type: none;
+  }
+/**/
+summary {
+  list-style-type: none;
+  display: block;
+  }

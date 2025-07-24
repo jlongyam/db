@@ -1,0 +1,26 @@
+:root {
+	--widget_radio__color: #9e9e9e;
+}
+.radio {
+
+	}
+.radio_control {
+	display: none;
+	}
+.radio > .icon_svg {
+	width: auto;
+	padding-left: 0;
+	fill: var( --widget_radio__color );
+	}
+.radio_icon__on {
+	display: none;
+	}
+	.radio_control:checked ~ .radio_icon__on {
+		display: inline-block;
+		}
+.radio_icon__off {
+
+	}
+	.radio_control:checked ~ .radio_icon__off {
+		display: none;
+		}

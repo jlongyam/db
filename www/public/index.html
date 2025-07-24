@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="content-type" content="text/html" />
+  <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Taxo</title>
+  <!-- icon -->
+  <link rel="icon" type="x-image/ico" href="./asset/icon/T/favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="asset/style/import.css" />
+  <!--
+    firefox bug-fix on devtool:
+      Layout was forced before the page was fully loaded.
+      If stylesheets are not yet loaded this may cause a flash of unstyled content.
+    fixed:
+      https://stackoverflow.com/questions/21147149/flash-of-unstyled-content-fouc-in-firefox-only-is-ff-slow-renderer
+  -->
+  <script>let FF_FOUC_FIX</script>
+</head>
+<body>
+<div id="root">
+	<div class="bar">
+		<div class="bar__container">
+			<span class="bar__section">
+				<a href="index.html">Home</a>
+			</span>
+      <span class="bar__section">
+				<a href="about/index.html">About</a>
+			</span>
+			<span class="bar__section">
+				<a href="javascript:void(0)">Help</a>
+			</span>
+		</div>
+	</div>
+	<hr />
+	<h1>Welcome</h1>
+	<p>This site is eary access ...</p>
+  <p>Done</p>
+	<p><a href="javascript:void(0)" onclick="window.history.back()">Go Back</a></p>
+</div>
+</body>
+</html>

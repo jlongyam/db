@@ -1,0 +1,69 @@
+:root  {
+	/* theme-base */
+	--app-theme_color_bg: #3f51b5;
+	--app-theme_color_bg__hover: #5c6bc0;
+	--app-theme_color_bg__text: #fff;
+	--app-theme_color_control: #212121;
+	/* override 'base.css' */
+	--base__font-family--heading: var( --font-family_sans-serif );
+	--base__tab-size: 2;
+	--base__color--block: var( --app-theme_color_bg );
+	/* override 'editor.css' */
+	--ta-edit__border: 1px solid var( --base__color--block );
+	--ta-edit__bar: var( --base__color--block );
+	/* override 'widget/' */
+	--widget_checkbox__color: var( --app-theme_color_control );
+	--widget_radio__color: var( --app-theme_color_control );
+	--widget__tab_hover-color: var( --app-theme_color_bg__hover );
+	--widget__accordion__color: var( --app-theme_color_bg__text );
+	--widget__tab_color: var( --app-theme_color_bg );
+	--widget__tab_color__active: var( --app-theme_color_bg__text );
+	/* override app.css */
+	--app_color_1: var( --app-theme_color_bg );
+  --app_color_1__text: var( --app-theme_color_bg__text );
+  --app_color_1__hover: var( --app-theme_color_bg__hover );
+}
+/** == ID == */
+/** drawer
+	*
+	*/
+	#app_info:hover {
+		cursor: pointer;
+		}
+/** bar
+	*
+	*/
+	#app_main_bar {}
+		#main_bar_heading {
+			font-size: 1.5rem;
+			margin-bottom: 0;
+			user-select: none;
+			}
+		#main_bar_button {
+			float: right;
+			}
+/** breadcrumb
+	*
+	*/
+	#app_main_bar > .breadcrumb {
+		margin-bottom: 0;
+		letter-spacing: 1px;
+		color: #fff;
+		}
+/** dialog
+	*
+	*/
+	#app_dialog_content table {
+		width: 100%;
+		}
+	#app_dialog_content td {
+		border: 0;
+		}
+/** list
+	*
+	*/
+	#list_show .list_icon__after {
+		fill: var( --app-theme_color_bg );
+		}
+
+

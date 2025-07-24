@@ -1,0 +1,19 @@
+.breadcrumb,
+.breadcrumb_item {
+	height: 36px;
+	line-height: 36px;
+	}
+.breadcrumb_item:after,
+.breadcrumb_item:before {
+	bottom: 0;
+	border-top: 18px solid transparent;
+	border-bottom: 19px solid transparent;
+	border-left: 17px solid var( --base__color--document );
+	}
+.breadcrumb_item:after {
+	right: -17px;
+	border-left: 18px solid var( --widget__breadcrumb_background-color );
+	}
+.breadcrumb_item:first-of-type {
+	padding-left: 1rem;
+	}

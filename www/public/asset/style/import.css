@@ -1,0 +1,16 @@
+@import 'vendor/water.css-2.1.1/light.css';
+
+.bar {
+	}
+	.bar__container{
+		display: block;
+		}
+		.bar__section {
+			display: inline-block;
+			}
+			.bar__section:after {
+				content: " . ";
+				}
+			.bar__section:last-child:after {
+				content: "";
+				}

@@ -1,0 +1,20 @@
+
+:root {
+  --plugin__ol-colorize_color: var( --base__color--block );
+  }
+ol {
+  counter-reset: unit;
+  padding-left: 0;
+  }
+  li ol {
+    padding-left: 1.25rem;
+    }
+  ol li {
+    list-style-type: none;
+    }
+  ol li:before{
+    counter-increment: unit;
+    content: counters( unit,"." ) ".  ";
+    color: var( --plugin__ol-colorize_color );
+    font-weight: bold;
+    }

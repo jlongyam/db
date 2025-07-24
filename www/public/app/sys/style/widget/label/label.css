@@ -1,0 +1,108 @@
+:root {
+	--widget__label--font-family: Consolas, monospace;
+	--widget__label--color: #fff;
+	--widget__label_tag--color: green;
+	--widget__label_ribbon--color: purple;
+	--widget__label_follow--color: #03a9f4;
+}
+/** normalize
+	*
+	*/
+	a.label {
+		color: inherit;
+		}
+	a.label:hover,
+	a.label:active {
+		border-bottom: none;
+		}
+	a.label:active {
+		color: var( --widget__label--color );
+		}
+.label {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  font-family: var( --widget__label_font-family );
+  line-height: 1.15;
+
+	}
+  .label._tag {
+    background-color: green;
+    margin-left: 15px;
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 0 3px 3px 0;
+    color: var( --widget__label--color );
+  	}
+    .label._tag:before {
+      position: absolute;
+      content: "";
+      border-right: 15px solid green;
+      left: -15px;
+      top: 0;
+      bottom: 0;
+      border-top: 14px solid transparent;
+      border-bottom: 14px solid transparent;
+    	}
+      /*FIX unecessary gap */
+      @media (min-width: 576px) {
+        .label._tag:before {
+          left: -15px;
+          }
+        }
+      @media (min-width: 768px) {
+        .label._tag:before {
+          left: -13.5px;
+          }
+        }
+      @media (min-width: 992px) {
+        .label._tag:before {
+          left: -14.5px;
+          }
+        }
+    .label._tag:after {
+      position: absolute;
+      content: "";
+      width: 6px;
+      height: 6px;
+      top: 11px;
+      left: -6px;
+      background-color: var( --widget__label--color );
+      border-radius: 10px;
+    	}
+  .label._ribbon {
+    padding: 5px 25px 5px 10px;
+    background-color: var( --widget__label_ribbon--color );
+    margin-bottom: 5px;
+    color: var( --widget__label--color );
+  	}
+    .label._ribbon:before {
+      position: absolute;
+      content: "";
+      top: 0;
+      bottom: 0;
+      right: -1px;
+      border-top: 14px solid transparent;
+      border-bottom: 14px solid transparent;
+      border-right: 10px solid #fff;
+      border-right: 10px solid var( --base__color--document );
+    	}
+  .label._follow {
+    background-color: var( --widget__label_follow--color );
+    color: var( --widget__label--color );
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    margin-right: 15px;
+  	}
+    .label._follow:after {
+      position: absolute;
+      content: "";
+      border-left: 15px solid var( --widget__label_follow--color );
+      right: -14px;
+      top: 0px;
+      bottom: 0;
+      border-top: 14px solid transparent;
+      border-bottom: 14px solid transparent;
+    	}
+  

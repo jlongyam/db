@@ -1,0 +1,104 @@
+h1 {
+  font-size: 4rem;
+  }
+h2 {
+  font-size: 3rem;
+  }
+h3 {
+  font-size: 2rem;
+  }
+h4 {
+  font-size: 1.5rem;
+  }
+h5 {
+  font-size: 1.25rem;
+  }
+h6 {
+  font-size: 1rem;
+  }
+h1,h2,h3,h4,h5,h6 {
+  font-family: var( --base__font-family--heading );
+  margin-bottom: var( --base__margin-bottom );
+  }
+pre,
+code,
+samp,
+kbd,
+textarea {
+  font-family: var( --base__font-family--mono );
+  font-size: 1rem;
+  }
+a {
+  }
+  a:link {
+    color: var( --base__color--a_link );
+    }
+    a:link:hover{
+      border-bottom: 1px solid var( --base__color--a_link );
+      }
+  a:active {
+    color: var( --base__color--a_active );
+    }
+    a:active:hover {
+      border-bottom: 1px solid var( --base__color--a_active );
+      }
+  a:visited {
+    color: var( --base__color--a_visited );
+    }
+    a:visited:active {
+      color: var( --base__color--a_active );
+      border-color: var( --base__color--a_active );
+      }
+mark {
+  background-color: var( --base__color--mark );
+  color: #000;
+  padding: 0 5px 3px;
+  }
+abbr {
+  text-transform: uppercase;
+  }
+  abbr[title], dfn[title] {
+    border-bottom: 1px dotted  #000;
+    }
+kbd {
+  background-color: #000;
+  color: #fff;
+  padding: 0 5px 3px;
+  }
+code {
+  background-color: var( --base__color--window );
+  padding: 0 5px 3px;
+  }
+  pre code { 
+    background-color: inherit;
+    padding: 0;
+    }
+var {
+  color: var( --base__color--var );
+  }
+samp {
+  background-color: #000;
+  color: #fff;
+  padding: 0 5px 3px;
+  }
+dfn {
+  font-weight: bold;
+  color: var( --base__color--dfn );
+  font-style: normal;
+  }
+q {
+  }
+  q:before{
+    content: '❛ ';
+    }
+  q:after{
+    content:' ❜';
+    }
+strong {
+  color: var( --base__color--strong );
+  }
+time{
+  }
+pre {
+  overflow: auto;
+  }

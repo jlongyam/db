@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="content-type" content="text/html" />
+  <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <title>selector</title>
+  <script src="../../core/type/type.js"></script>
+  <script src="./selector.js"></script>
+</head>
+<body>
+  <h2><code>$( EXPR, CON )</code></h2>
+  <pre>TARGET, should be red color</pre>
+  <div id="div">
+    <pre>TARGET in #div, should be green</pre>
+  </div>
+  <script>
+    $('pre').style.color = 'red'
+    $('pre', div ).style.color = 'green'
+  </script>
+  <h2><code>$$( EXPR, CON )</code></h2>
+  <div>TARGET <code>default</code> should be blue
+    <ul>
+      <li>list1</li>
+      <li>list2</li>
+      <li>list3</li>
+      <li>list4</li>
+    </ul>
+  </div>
+  <div id="dev">TARGET in <code>#dev</code> should be purple
+    <ul>
+      <li>list1</li>
+      <li>list2</li>
+      <li>list3</li>
+      <li>list4</li>
+    </ul>
+  </div>
+  <script>
+    $$('li').forEach((v)=> {
+      v.style.color = 'blue'
+    })
+    $$('li', dev ).forEach((v)=> {
+      v.style.color = 'purple'
+    })
+  </script>
+</body>
+</html>

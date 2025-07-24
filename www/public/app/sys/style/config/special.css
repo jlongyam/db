@@ -1,0 +1,208 @@
+/** override
+	*
+	*/
+	code {
+		background-color: whitesmoke;
+		}
+	dfn {
+		color: #9c27b0;
+		}
+	figcaption {
+		color: #fff;
+		}
+	var {
+		font-style: normal;
+	}
+/** tab
+	*
+	*/
+	.tab_source_area {
+		height: 350px;/*== .tab_result_area*/
+		}
+		.tab_source_area > .ta-edit {
+			border: 0;
+			}
+	.tab_result_area {
+		height: 350px;
+		}
+		.tab_result_area > textarea {
+			height: 200px;
+			border: 0;
+			resize: none;
+			overflow: auto;
+			}
+	.tab_control_area {
+		background-color: #673ab7;
+		background-color: var( --base__color--block );
+		padding: .25rem .5rem;
+		text-align: right;
+		}
+/** acordion
+	*
+	*/
+	.accordion_control_area {
+		background-color: #673ab7;
+		background-color: var( --base__color--block );
+		padding: .25rem .5rem;
+		text-align: right;
+		}
+/** figure
+	*
+	*/
+	.figure_control_area {
+		background-color: #673ab7;
+		background-color: var( --base__color--block );
+		padding: .25rem .5rem;
+		text-align: right;
+		}
+/** copy_info
+	*
+	*/
+	.copy_info {
+		background-color: #ffc107;
+		color: #000;
+		padding: 5px 8px;
+		vertical-align: middle;
+		border-radius: 5px 0 5px 5px;
+		}
+/** == wg = widget == */
+/** wg_img_container
+	*
+	*/
+	.wg_img_container {
+		padding: 1rem
+		}
+/** wg_iframe_container
+	*
+	*/
+	.wg_iframe_container > iframe {
+		border: 0;
+		}
+/** wg_console
+	*
+	*/
+	.wg_console {
+
+		}
+		.wg_console_title {
+			padding-left: .5rem;
+			}
+		.wg_console_content {
+			
+			}
+		  pre[class*=language-].wg_console_content {
+		    background: #000;
+		    }
+			pre[class*=language-].wg_console_content code[class*=language-] {
+				text-shadow: none;
+				color: #fff;
+				}
+			pre[class*=language-].wg_console_content mark {
+				background-color: #ffeb3b;
+				padding-bottom: 0;
+				}
+			pre[class*=language-].wg_console_content mark[class] {
+				background-color: transparent;
+				color: inherit;
+				padding: 0;
+				}
+			pre[class*=language-].wg_console_content mark.blue {
+				color: #2196f3;
+				}
+			.wg_console_content .token.property,
+		  .wg_console_content .token.tag,
+		  .wg_console_content .token.boolean,
+		  .wg_console_content .token.number,
+		  .wg_console_content .token.constant,
+		  .wg_console_content .token.symbol,
+		  .wg_console_content .token.deleted {
+		    color: #4caf50;
+		    }
+		  .wg_console_content .token.selector,
+		  .wg_console_content .token.attr-name,
+		  .wg_console_content .token.string,
+		  .wg_console_content .token.char,
+		  .wg_console_content .token.builtin,
+		  .wg_console_content .token.inserted {
+		    color: #FF5722;
+		    }
+		  .wg_console_content .token.atrule,
+		  .wg_console_content .token.attr-value,
+		  .wg_console_content .token.keyword {
+		    color: #009688;
+		    }
+		  .wg_console_content .token.punctuation {
+		  	color: #cddc39;
+		  	}
+		  .wg_console_content .token.function {
+		  	color: #ce93d8;
+		  	}
+      .wg_console_content .token.operator {
+        background-color: inherit;
+      }
+/** wg_accordion_prism
+	*
+	*/
+	.wg_accordion_prism .accordion__content  {
+		padding: 0;
+		}
+/** wg_tab_prism
+	*
+	*/
+	.wg_tab_prism .tab-body {
+		padding: 0;
+		}
+/** wg_tab_preview
+	*
+	*/
+	.wg_tab_preview > .tab-body {
+		padding: 0;
+		}
+/** wg_tab_preview_result_iframe
+	*
+	*/
+	.wg_tab_preview_result_iframe {
+		border: 0;
+		height: 244px;
+		}
+/** wg_tab_preview_result_div
+	*
+	*/
+	.wg_tab_preview_result_div {
+		height: 244px;
+		overflow: auto;
+		}
+/** wg_accordion_preview_source
+	*
+	*/
+	.wg_accordion_preview_source {}
+		.wg_accordion_preview_source.ta-edit {
+			border: 0;
+			height: 200px;
+			margin-bottom: 0;
+			}
+/** wg_accordion_preview_result_iframe
+	*
+	*/
+	.wg_accordion_preview_result_iframe {
+		height: 200px;
+		}
+/** wg_accordion_preview_result_div
+	*
+	*/
+	.wg_accordion_preview_result_div {
+		height: 200px;
+		overflow: auto;
+		}
+/** label _config
+	*
+	*/
+	.label._config {
+		cursor: pointer;
+		}
+/** thead > th _nopointer
+	*
+	*/
+	thead th._nopointer {
+		cursor: initial;
+		}

@@ -1,0 +1,24 @@
+table {
+  display: inline-block;
+  max-width: 100%;
+  overflow-x: auto;
+  vertical-align: top;
+  margin-bottom: var( --base__margin-bottom );
+}
+td, th {
+  border: 2px solid var( --base__color--block );
+  }
+td, th, caption {
+  padding: .5rem;
+  }
+
+caption {
+  font-weight: bold;
+  border: 2px solid var( --base__color--block );
+  border-bottom: 0;
+  }
+tfoot th {
+  font-style: italic;
+  font-size: 90%;
+  }
+  

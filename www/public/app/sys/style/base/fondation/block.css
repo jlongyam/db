@@ -1,0 +1,36 @@
+hr {
+  border-top: 1px solid var( --base__color--window );
+  margin: .5em 0;
+  }
+blockquote {
+  padding: 1rem;
+  border-left: 5px solid var( --base__color--block );
+  background-color: whitesmoke;
+  }
+figure {
+  border: 2px solid var( --base__color--block );
+  }
+figcaption {
+  background-color: var( --base__color--block );
+  padding: .5rem;
+  display: block;
+  position: relative;
+  }
+fieldset {
+  border: 2px solid var( --base__color--block );
+  padding: 1rem;
+}
+legend {
+  padding: .1rem .5rem .2rem;
+  border: 2px solid var( --base__color--block );
+  margin-left: -1.15rem;
+  }
+  legend h1, legend h2, legend h3, legend h4, legend h5, legend h6 {
+    margin-bottom: .25rem;
+    }
+p,
+blockquote,
+figure,
+fieldset {
+	margin-bottom: var(--base__margin-bottom);
+	}

@@ -1,0 +1,41 @@
+textarea {
+  display: block;
+  resize: vertical;
+  padding: var( --base__padding );
+  min-height: 4rem;
+  width: 100%;
+  font-size: inherit;
+  line-height: inherit;
+  /*height: 5rem;*/
+  }
+  textarea[rows] {
+    height: auto;
+    }
+button,
+select,
+input[list],
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="url"],
+input[type="tel"]  {
+  padding: .1rem .5rem .2rem;
+  font-size: inherit;
+  font-family: inherit;
+}
+input[type=file] {
+  font-size: inherit;
+  font-family: inherit;
+}
+input[type="radio"],
+input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+}
+input[type="color"] {
+  width: 1.9rem;
+  height: 1.86rem;
+}

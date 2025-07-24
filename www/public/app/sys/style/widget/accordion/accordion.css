@@ -1,0 +1,44 @@
+
+:root {
+  --widget__accordion__background-color: var( --base__color--block );
+  --widget__accordion__color: #000;
+  --widget__accordion__box-shadow: var( --base__box-shadow );
+  --widget__accordion__icon-close: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" fill="%23fff" width="24" height="24" viewBox="0 0 24 24"><path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z" /></svg>');
+  --widget__accordion__icon-open: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" fill="%23fff" width="24" height="24" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>');
+}
+
+/** accordion-basic
+	*
+	*/
+	.accordion {
+	  border: 2px solid var( --widget__accordion__background-color );
+	  box-shadow: var( --widget__accordion__box-shadow );
+	  }
+	.accordion__title {
+	  background-color: var( --widget__accordion__background-color );
+	  color: var( --widget__accordion__color );
+	  padding: .5rem;
+	  position: relative;
+	  }
+	  .accordion__title:before,
+	  .accordion[open] .accordion__title:before { /* normalize 'summary.marker.css' */
+	  	content: none;
+	  	}
+	  .accordion__title:after {
+	    position: absolute;
+	    content: var( --widget__accordion__icon-close );
+	    top: .35rem;
+	    right: .5rem;
+	    }
+	  .accordion[open] .accordion__title:after {
+	    content: var( --widget__accordion__icon-open );
+	    }
+	.accordion__content {
+	  padding: .5rem;
+	  }
+/** accordion-set
+	*
+	*/
+	.accordion__set .accordion {
+	  margin-bottom: .25rem;
+		}

@@ -1,0 +1,27 @@
+:root {
+	--widget_checkbox__color: #9e9e9e;
+}
+.checkbox {
+
+	}
+.checkbox_control {
+	display: none;
+	}
+.checkbox > .icon_svg {
+	width: auto;
+	padding-left: 0;
+	fill: var( --widget_checkbox__color );
+	}
+.checkbox_icon__on {
+	display: none;
+	}
+	.checkbox_control:checked ~ .checkbox_icon__on {
+		display: inline-block;
+		}
+.checkbox_icon__off {
+
+	}
+	.checkbox_control:checked ~ .checkbox_icon__off {
+		display: none;
+		}
+

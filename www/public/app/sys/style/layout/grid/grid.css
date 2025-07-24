@@ -1,0 +1,59 @@
+/** structure
+
+	<div class="grid">
+	  <div class="grid_cell _3-12">3 from 12</div>
+	  <div class="grid_cell _9-12">9 from 12</div>
+	</div>
+
+	*/
+.grid {
+	display: flex;
+	flex-wrap: wrap;
+	}
+/** vertical
+	*
+	*/
+	.grid._top { align-items: flex-start; }
+	.grid._middle { align-items: center; }
+	.grid._bottom { align-items: flex-end; }
+	.grid._stretch { align-items: stretch; }
+	.grid._baseline { align-items: baseline; }
+/** horizontal
+	*
+	*/
+	.grid._left { justify-content: flex-start; }
+	.grid._center { justify-content: center; }
+	.grid._right { justify-content: flex-end; }
+	.grid._between { justify-content: space-between; }
+	.grid._around { justify-content: space-around; }
+/** cell
+	*
+	*/
+	.grid_cell { box-sizing: border-box; flex-shrink: 0; }
+	.grid_cell._fill { width: 0; min-width: 0; flex-grow: 1; }
+	.grid_cell._1-12 { width: calc(100% * 1 / 12); }
+	.grid_cell._2-12 { width: calc(100% * 2 / 12); }
+	.grid_cell._3-12 { width: calc(100% * 3 / 12); }
+	.grid_cell._4-12 { width: calc(100% * 4 / 12); }
+	.grid_cell._5-12 { width: calc(100% * 5 / 12); }
+	.grid_cell._6-12 { width: calc(100% * 6 / 12); }
+	.grid_cell._7-12 { width: calc(100% * 7 / 12); }
+	.grid_cell._8-12 { width: calc(100% * 8 / 12); }
+	.grid_cell._9-12 { width: calc(100% * 9 / 12); }
+	.grid_cell._10-12 { width: calc(100% * 10 / 12); }
+	.grid_cell._11-12 { width: calc(100% * 11 / 12); }
+	.grid_cell._12-12 { width: 100%; }
+/** helper
+	*
+	*/
+	.grid_show{}
+		.grid_show.grid {
+			border: 1px solid #9e9e9e;
+			padding: 1rem;
+			margin-bottom: 5px;
+			min-height: 200px;
+			}
+		.grid_show .grid_cell {
+			padding: 1rem;
+			border: 1px solid #3f51b5;
+			}

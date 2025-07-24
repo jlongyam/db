@@ -1,0 +1,14 @@
+pre#output {
+  /*fix*/font-size: 100%;
+  /*fix*/font-family: Consolas, Monospace;
+  border: 2px solid #A2A2A2;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  }
+  pre#output hr {
+    border: 0;
+    height: 1px;
+    margin: 5px 0;
+    border-top: 1px solid silver;
+    }
+	
